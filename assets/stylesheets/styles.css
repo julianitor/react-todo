@@ -1,0 +1,630 @@
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    $HELPERS
+    -> Extends, Functions, Mixins, Animations
+\*------------------------------------*/
+/*------------------------------------*\
+    $NORMALIZE
+\*------------------------------------*/
+/* line 7, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 21, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 25, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 32, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 36, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+a {
+  background: transparent;
+}
+
+/* line 40, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 44, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 49, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+h1, h2, h2, h3, h4, h6 {
+  margin: 0;
+}
+
+/* line 59, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+p {
+  margin: 0;
+}
+
+/* line 63, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+::selection {
+  background: #A50000;
+  color: #FFF;
+}
+
+/* line 67, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+::-moz-selection {
+  background: #A50000;
+  color: #FFF;
+}
+
+/* line 72, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+ul, ol, dl, dd {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 78, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+img {
+  border: 0;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 85, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+iframe {
+  max-width: 100%;
+}
+
+/* line 89, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* line 93, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/* Tipos */
+@font-face {
+  font-family: "proxima-nova";
+  src: url("../fonts/proximanova-light-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-light-webfont.woff") format("woff"), url("../fonts/proximanova-light-webfont.ttf") format("truetype"), url("../fonts/proximanova-light-webfont.svg#proxima-nova") format("svg");
+  /* Legacy iOS */
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "proxima-nova";
+  src: url("../fonts/proximanova-regular-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-regular-webfont.woff") format("woff"), url("../fonts/proximanova-regular-webfont.ttf") format("truetype"), url("../fonts/proximanova-regular-webfont.svg#proxima-nova") format("svg");
+  /* Legacy iOS */
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+/* Global */
+/* line 16, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_base.scss */
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+/* line 21, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_base.scss */
+body {
+  background: #fff;
+  color: #878787;
+  font-family: "proxima-nova";
+  font-size: 100%;
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* line 32, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_base.scss */
+section, p, article, img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Block Content */
+/* Inline Content */
+/* line 47, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_base.scss */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 52, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_base.scss */
+a:focus {
+  outline: none;
+}
+
+/* line 56, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_base.scss */
+p a {
+  color: #A50000;
+}
+
+/* line 60, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_base.scss */
+.centered {
+  text-align: center;
+}
+
+/*------------------------------------*\
+    js-sensor
+    -> Relocate html in responsive
+\*------------------------------------*/
+/* line 69, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_base.scss */
+.js-sensor {
+  display: none;
+  margin-left: 0px;
+}
+
+@media only screen and (min-width: 36.25em) and (max-width: 61.87438em) {
+  /* line 75, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_base.scss */
+  .js-sensor {
+    margin-left: 1px;
+  }
+}
+@media only screen and (min-width: 61.875em) {
+  /* line 81, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_base.scss */
+  .js-sensor {
+    margin-left: 2px;
+  }
+}
+/*------------------------------------*\
+    $HEADINGS
+\*------------------------------------*/
+/* line 7, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_headings.scss */
+h1, .alpha {
+  font-size: 30px;
+  font-size: 1.875rem;
+  padding: 20px 0px;
+}
+
+/* line 12, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_headings.scss */
+h2, .beta {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+/* line 15, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_headings.scss */
+h3, .gamma {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+@media only screen and (min-width: 36.25em) {
+  /* line 39, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_headings.scss */
+  h1, .alpha {
+    font-size: 36px;
+    font-size: 2.25rem;
+  }
+
+  /* line 42, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_headings.scss */
+  h2, .beta {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+
+  /* line 45, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_headings.scss */
+  h3, .gamma {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/* line 7, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_layout.scss */
+.wrapper {
+  width: 80%;
+  max-width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+  /* clearfix */
+}
+
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+/* Grid Container */
+/* line 19, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_layout.scss */
+.g {
+  letter-spacing: -0.35em;
+}
+/* line 21, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_layout.scss */
+.g > * {
+  letter-spacing: normal;
+}
+
+/* Grid Item */
+/* line 27, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_layout.scss */
+.gi {
+  letter-spacing: normal;
+}
+@media only screen and (min-width: 36.25em) {
+  /* line 27, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_layout.scss */
+  .gi {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+/* line 36, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_layout.scss */
+.hidden {
+  display: none !important;
+}
+
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+/* line 6, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_forms.scss */
+form {
+  margin: 0;
+}
+
+/* line 10, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_forms.scss */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 16, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_forms.scss */
+button,
+input,
+textarea {
+  -webkit-appearance: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 23, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_forms.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 28, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_forms.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 33, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_forms.scss */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+/* line 38, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+}
+
+/* line 42, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_forms.scss */
+button {
+  border: none;
+  background: none;
+}
+
+/* line 47, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_forms.scss */
+::-webkit-input-placeholder {
+  color: #bbbbbb;
+}
+
+/* line 51, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_forms.scss */
+::-moz-placeholder {
+  color: #bbbbbb;
+}
+
+/* line 55, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_forms.scss */
+:-ms-input-placeholder {
+  color: #bbbbbb;
+}
+
+/*------------------------------------*\
+    $SPECIFIC FORMS
+\*------------------------------------*/
+/* line 64, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/base/_forms.scss */
+.resp-form input {
+  border: none;
+  background: #bf0000;
+  width: 200px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  height: 40px;
+  padding: 0 30px 0 10px;
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+/* line 6, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_footer.scss */
+.main-footer {
+  border-top: 2px solid #ccc;
+  color: #3E4147;
+  text-align: center;
+  padding: 20px;
+}
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+/* line 6, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_header.scss */
+.main-header {
+  background: #A50000;
+  padding: 20px 0px;
+}
+
+/*------------------------------------*\
+    $ICONS
+\*------------------------------------*/
+@font-face {
+  font-family: 'icomoon';
+  src: url("/assets/fonts/icomoon.eot?-lwhvgt");
+  src: url("/assets/fonts/icomoon.eot?#iefix-lwhvgt") format("embedded-opentype"), url("/assets/fonts/icomoon.woff?-lwhvgt") format("woff"), url("/assets/fonts/icomoon.ttf?-lwhvgt") format("truetype"), url("/assets/fonts/icomoon.svg?-lwhvgt#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 17, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_icons.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 31, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_icons.scss */
+.icon-bin:before {
+  content: "\e600";
+}
+
+/* line 35, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_icons.scss */
+.icon-done:before {
+  content: "\e601";
+}
+
+/* line 39, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_icons.scss */
+.icon-close:before {
+  content: "\e602";
+}
+
+/*------------------------------------*\
+    $PANEL
+\*------------------------------------*/
+/* line 6, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_panel.scss */
+.panel {
+  background: #fff;
+  overflow: hidden;
+  border: 1px solid #eee;
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+  -moz-box-shadow: 1px 1px 1px 1px #ccc;
+  box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+/*------------------------------------*\
+    $STICKY FOOTER
+\*------------------------------------*/
+/* line 6, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_sticky-footer.scss */
+* {
+  margin: 0px;
+}
+
+/* line 10, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_sticky-footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 13, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_sticky-footer.scss */
+.all-content {
+  min-height: 100%;
+  margin: 0 auto -60px;
+  /* the bottom margin is the negative value of the footer's height */
+}
+
+/* line 17, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_sticky-footer.scss */
+.main-footer, .push-footer {
+  height: 60px;
+  /* '.push' must be the same height as 'footer' */
+}
+
+/*------------------------------------*\
+    $TO DO
+\*------------------------------------*/
+/* line 6, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo {
+  width: 80%;
+  margin: 0px auto 40px;
+  max-width: 700px;
+}
+/* line 10, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-header {
+  border-bottom: 1px dotted #eee;
+  padding: 20px;
+}
+/* line 13, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-header input {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  color: #000;
+  outline: none;
+}
+/* line 20, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-header ::-webkit-input-placeholder {
+  color: #999;
+}
+/* line 23, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-header :-moz-placeholder {
+  /* Firefox 18- */
+  color: #999;
+}
+/* line 26, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-header ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #999;
+}
+/* line 29, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-header :-ms-input-placeholder {
+  color: #999;
+}
+/* line 33, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-main {
+  padding-left: 20px;
+}
+/* line 35, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-main li {
+  position: relative;
+  padding: 20px 0px;
+  color: #000;
+  border-bottom: 1px dotted #eee;
+}
+/* line 39, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-main li:last-child {
+  border-bottom: none;
+}
+/* line 44, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-main .done label {
+  text-decoration: line-through;
+  color: #888;
+}
+/* line 49, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-main .close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: #ff0c0c;
+  padding: 20px;
+}
+/* line 55, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-main .close:hover {
+  color: #A50000;
+}
+/* line 59, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-main input[type="checkbox"] {
+  margin: 0px 10px;
+  color: #3E4147;
+}
+/* line 64, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-footer {
+  background: #f2f2f2;
+  padding: 20px;
+}
+/* line 99, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/globals/_mixins.scss */
+.todo .todo-footer:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+/* line 68, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-footer a:hover {
+  color: red;
+}
+/* line 71, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-footer span {
+  display: inline-block;
+  vertical-align: top;
+  color: #3E4147;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+/* line 78, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-footer .completed a {
+  padding: 0px 5px;
+}
+/* line 82, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-footer .completed,
+.todo .todo-footer .remaining,
+.todo .todo-footer .clear {
+  display: inline-block;
+  width: 32%;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 90, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-footer .active {
+  font-weight: 700;
+}
+/* line 94, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-footer .clear span {
+  color: #4682B4;
+  vertical-align: middle;
+}
+/* line 97, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+.todo .todo-footer .clear span:hover {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 36.24938em) {
+  /* line 6, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+  .todo {
+    width: 99%;
+  }
+  /* line 106, /Users/sara/proyectos/maqueta-cataJS/source/assets/stylesheets/objects/_todo.scss */
+  .todo .todo-footer .remaining,
+  .todo .todo-footer .completed,
+  .todo .todo-footer .clear {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+}

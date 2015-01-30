@@ -1,0 +1,14 @@
+{
+  "name": "03_hardcore_flux",
+  "version": "1.0.0",
+  "scripts": {
+    "bundle": "jsx src/ build/; ./node_modules/.bin/webmake build/app.js out/bundle.js;",
+    "watch": "./node_modules/.bin/onchange 'src/**/*.js' -- npm run bundle"
+  },
+  "dependencies": {
+    "mori": "^0.3.2",
+    "onchange": "0.0.2",
+    "webmake": "^0.3.36",
+    "react-tools": "^0.12.2"
+  }
+}
