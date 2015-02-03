@@ -1,6 +1,7 @@
 var React = require('../lib/react'),
     d = require('../lib/redact').d,
     models = require('./models'),
+    state = require('./state_atom'),
     controllers = require('./controllers'),
     _ = require('mori'),
     sender = require('./dispatcher').sender;
@@ -125,8 +126,15 @@ var TodoBox = React.createClass({
 // General Page Layout
 
 var Layout = React.createClass({
+  componentDidMount: function() {
+    var setFocus = function() { document.getElementById('focus').focus(); };
+
+    state.addChangeListener((function(state) {
+      this.setProps({state: state});
+      setTimeout(setFocus, 0);
+    }).bind(this));
+  },
   render: function() {
-    console.log(this.props)
     return (<div className='wrapper'>
              <h1 className='centered'> To Do </h1>
              <TodoBox state={this.props.state}/>

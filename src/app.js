@@ -13,21 +13,8 @@ window.onload = function() {
     data: {todos: []}
   }));
 
-  //var update = React.render.bind(React, <Layout state={state.get()}/>, document.getElementById('main'))
-  var update = function(s) {
-        React.render(<Layout state={s}/>, document.getElementById('main'));
-  }
-
-  //var update = React.render(<Layout state={state_atom.get()}/>,
-//  //components.layout(state.get()),
-//                       document.getElementById('main')),
-      setFocus = function() { document.getElementById('focus').focus(); };
-  update(state.get());
-  // better: debounce update
-  state.addChangeListener(function(state) {
-    //state.swap(state);
-    update(state);
-    setTimeout(setFocus, 0);
-  });
+  React.render(<Layout state={state.get()}/>, document.getElementById('main'));
+  var setFocus = function() { document.getElementById('focus').focus(); };
+  setTimeout(setFocus, 0);
 
 };

@@ -559,22 +559,9 @@
 				    data: {todos: []}
 				  }));
 
-				  //var update = React.render.bind(React, <Layout state={state.get()}/>, document.getElementById('main'))
-				  var update = function(s) {
-				        React.render(React.createElement(Layout, {state: s}), document.getElementById('main'));
-				  }
-
-				  //var update = React.render(<Layout state={state_atom.get()}/>,
-				//  //components.layout(state.get()),
-				//                       document.getElementById('main')),
-				      setFocus = function() { document.getElementById('focus').focus(); };
-				  update(state.get());
-				  // better: debounce update
-				  state.addChangeListener(function(state) {
-				    //state.swap(state);
-				    update(state);
-				    setTimeout(setFocus, 0);
-				  });
+				  React.render(React.createElement(Layout, {state: state.get()}), document.getElementById('main'));
+				  var setFocus = function() { document.getElementById('focus').focus(); };
+				  setTimeout(setFocus, 0);
 
 				};
 			},
@@ -582,6 +569,7 @@
 				var React = require('../lib/react'),
 				    d = require('../lib/redact').d,
 				    models = require('./models'),
+				    state = require('./state_atom'),
 				    controllers = require('./controllers'),
 				    _ = require('mori'),
 				    sender = require('./dispatcher').sender;
@@ -706,8 +694,15 @@
 				// General Page Layout
 
 				var Layout = React.createClass({displayName: "Layout",
+				  componentDidMount: function() {
+				    var setFocus = function() { document.getElementById('focus').focus(); };
+
+				    state.addChangeListener((function(state) {
+				      this.setProps({state: state});
+				      setTimeout(setFocus, 0);
+				    }).bind(this));
+				  },
 				  render: function() {
-				    console.log(this.props)
 				    return (React.createElement("div", {className: "wrapper"}, 
 				             React.createElement("h1", {className: "centered"}, " To Do "), 
 				             React.createElement(TodoBox, {state: this.props.state})
